@@ -139,7 +139,3 @@ Slider.prototype = {
      }, timeout);
      }*/
 };
-
-document.addEventListener('DOMContentLoaded', function () {
-    var aSlider = new Slider("#slider");
-});
