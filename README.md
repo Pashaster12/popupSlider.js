@@ -3,7 +3,7 @@ Simple RAW JavaScript popup slider. Based on https://codepen.io/gabrieleromanato
 
 Some features are commented in the code:
 
-- load the slider to the container with id #popupSlider;
+- load the slider to the container with id `popupSlider`;
 - closing the popup clicking outside;
 - make the carousel (auto slide changing with interval 5 seconds) - stop when the slide was changed manually.
 
@@ -27,6 +27,28 @@ If you want to attach the slider to the specified container, you should add the 
 ```
 
 Also you can change the value of the id in the code of the popupSlider.js
+
+# Adding new slides
+1. Add your pictures to the slides folder
+2. Add new HTML block to the slider wrapper with id `slider-wrapper`:
+
+```html
+<div class="slide">
+    <img src="slides/new_slide.jpg" alt="" />
+    <div class="caption">
+        <div class="caption-container">
+           Text
+        </div>
+    </div>
+</div>
+```
+
+3. Add new item to the block with id `slider-nav`:
+
+```html
+<a href="#" data-slide="id"></a>
+```
+Use the value of the `data-slide` greater then the largest at the current moment.
 
 # Planned in the future
 - make the external config file;
