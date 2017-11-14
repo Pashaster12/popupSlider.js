@@ -1,0 +1,116 @@
+#slider {
+    margin: auto;
+    width: 600px !important;
+    overflow: hidden;
+}
+#slider-wrapper {
+    width: 9999px;
+    height: 343px;
+    position: relative;
+    transition: left 400ms linear;
+}
+.slide {
+    float: left;
+    width: 600px;
+    position: relative;
+    overflow: hidden;
+}
+.caption {
+    width: 600px;
+    height: 110px;
+    line-height: 1.5;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: center;
+    color: #000;
+    display:table;
+}
+.caption-container {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 20px;
+}
+#slider-nav {
+    position: absolute;
+    bottom: -36px;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#slider-nav a {
+    width: 8px;
+    height: 8px;
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 5px;
+    background-color: #fafafa;
+}
+#slider-nav a.current {
+    background-color: #337ab7;
+}
+.horizontal-controls {
+    position: absolute;
+    display: inline-block;
+    width: 12px;
+    height: 20px;
+    top: 50%;
+    margin-top: -10px;
+}
+#prev {
+    background: url(../controls/arrow_left_inactive.png);
+    left: -40px;
+}
+#prev:hover {
+    background: url(../controls/arrow_left_active.png);
+}
+#next {
+    background: url(../controls/arrow_right_inactive.png);
+    right: -40px;
+}
+#next:hover {
+    background: url(../controls/arrow_right_active.png);
+}
+#cq-popup {
+    width: 600px;
+    z-index: 23;
+    left: calc(50%);
+    top: calc(50%);
+    position: fixed !important;
+    background-repeat: no-repeat;  
+    background-position: right;
+    background-color: #fff;
+    font-family: "Roboto","Segoe UI","Helvetica","Georgia","Calibri","Verdana";
+    transform: translate(-50%, -50%) scale(1);
+}
+#cq-popup .header {
+    display: inline-block;
+    font-size: 17px;
+    font-weight: 500;
+}
+#cq-popup > div {
+    width: 500px;
+    font-size: 22px;
+    line-height: 36px;
+}
+#cq-popup-btclose {
+    text-decoration: none;
+    position: absolute;
+    right: -40px;
+    top: 0;
+    background: url(../controls/btn_delete_inactive.png);
+    height: 16px;
+    width: 16px;
+}
+#cq-popup-btclose:hover {
+    background: url(../controls/btn_delete_active.png);
+}
+#cq-popup-bg {
+    position: fixed;
+    top:0; 
+    width: 100%; 
+    height: 100%;
+    background: rgba(51,51,51,0.8);
+    z-index: 22;
+}
