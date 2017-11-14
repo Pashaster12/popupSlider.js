@@ -14,8 +14,13 @@ Some features are commented in the code:
 ```html
 <script type="text/javascript" src="/path_to_slider_dir/popupSlider.js"></script>
 ```
+3. Add the following code into your existing JavaScript file for calling the slider (it may be the button press, documentReady or other action):
 
-3. If you want to attach the slider to the specified container, you should add the id #popupSlider to it:
+```javascript
+var aSlider = new Slider("#slider");
+```
+
+If you want to attach the slider to the specified container, you should add the id #popupSlider to it:
 
 ```html
 <div id="popupSlider"></div>
