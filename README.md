@@ -52,5 +52,6 @@ Use the value of the `data-slide` greater then the largest at the current moment
 
 # Planned in the future
 - make the external config file;
-- change the makeup for the situations when the slider would be embedded.
-- asynchronous slider loading
+- change the makeup for the situations when the slider would be embedded;
+- asynchronous slider loading;
+- make an npm package/
