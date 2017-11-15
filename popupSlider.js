@@ -48,7 +48,7 @@ Slider.prototype = {
         self.close();
         
         //Make the carousel (auto slide changing with interval 5 seconds) - stop when the slide was changed manually
-        self.slideShow(2000);
+        //self.slideShow(2000);
     },
 
     slide: function (element) {
@@ -106,7 +106,7 @@ Slider.prototype = {
 
         //Load the slider to the container with id #popupSlider
         /*var target = document.querySelector( "#popupSlider" );
-         target.innerHTML = sliderHTML;*/
+        target.innerHTML = sliderHTML;*/
 
         var div = document.createElement('div');
         div.innerHTML = sliderHTML;
