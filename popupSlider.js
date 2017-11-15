@@ -27,9 +27,6 @@ Slider.prototype = {
 
         self.prevBtn.style.display = 'none';
 
-        //Make the carousel (auto slide changing with interval 5 seconds) - stop when the slide was changed manually
-        //self.carousel(5000);
-
         self.nextBtn.addEventListener('click', function (e) {
             var currentSlideNumber = document.querySelector('#slider-nav a.current').getAttribute("data-slide");
             var nextSlide = document.querySelector('[data-slide="' + (parseInt(currentSlideNumber, 10) + 1) + '"]');
@@ -49,6 +46,9 @@ Slider.prototype = {
         }, false);
 
         self.close();
+        
+        //Make the carousel (auto slide changing with interval 5 seconds) - stop when the slide was changed manually
+        self.slideShow(2000);
     },
 
     slide: function (element) {
@@ -75,7 +75,6 @@ Slider.prototype = {
         var a = parent.querySelectorAll("a");
 
         link.className = "current";
-        this.currentElement = link;
 
         for (var j = 0; j < a.length; ++j) {
             var cur = a[j];
@@ -128,14 +127,14 @@ Slider.prototype = {
     },
 
     //Make the carousel (auto slide changing with interval 5 seconds) - stop when the slide was changed manually
-    /*carousel: function(timeout) {
-     var sliderCount = this.links.length;
-     var self = this;
-     
-     this.slideCycle = setInterval(function() {
-     var currentSlideNumber = document.querySelector('#slider-nav a.current').getAttribute( "data-slide" );
-     var slideId = parseInt( currentSlideNumber, 10 ) + 1;
-     self.slide(document.querySelector('[data-slide="' + (sliderCount == slideId ? 0 : slideId) + '"]'));
-     }, timeout);
-     }*/
+    /*slideShow: function (timeout) {
+        var sliderCount = this.links.length;
+        var self = this;
+
+        this.slideCycle = setInterval(function () {
+            var currentSlideNumber = document.querySelector('#slider-nav a.current').getAttribute("data-slide");
+            var slideId = parseInt(currentSlideNumber, 10) + 1;
+            self.slide(document.querySelector('[data-slide="' + (sliderCount == slideId ? 0 : slideId) + '"]'));
+        }, timeout);
+    }*/
 };
