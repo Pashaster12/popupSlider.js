@@ -9,7 +9,7 @@ Some features are commented in the code:
 
 # Integration to the site
 1. Copy the catalog to the site directory.
-2. Add the next line to the HTML code of your site before the </body> tag:
+2. Add the next line to the HTML code of your site before the closed `body` tag:
 
 ```html
 <script type="text/javascript" src="/path_to_slider_dir/popupSlider.js"></script>
@@ -26,7 +26,20 @@ If you want to attach the slider to the specified container, you should add the 
 <div id="popupSlider"></div>
 ```
 
-Also you can change the value of the id in the code of the popupSlider.js
+Also you can change the value of the id in the code of the popupSlider.js and you should add this section to the `loadStatic()` method:
+
+```javascript
+var target = document.querySelector( "#popupSlider" );
+target.innerHTML = sliderHTML;
+```
+
+You should add this code instead of the following:
+
+```javascript
+var div = document.createElement('div');
+div.innerHTML = sliderHTML;
+document.body.appendChild(div);
+```
 
 # Adding new slides
 1. Add your pictures to the slides folder
